@@ -1,0 +1,173 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap');
+
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+body {
+    background-color: #000;
+    background-clip: content-box;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.radial {
+    border-radius: 100px;
+    width: 320px;
+    height: 320px;
+    background-color: #9000FF;
+    filter: blur(160px);
+}
+
+#r1 {
+    position: absolute;
+    top: -150px;
+    right: -250px;
+}
+
+#r2{
+    position: absolute;
+    top: 600px;
+    left: -150px;
+}
+
+#r3 {
+    position: absolute;
+    top: 900px;
+    right: -150px;
+}
+
+#textVertical {
+    font-size: 100px;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -180px;
+    top: 1000px;
+    margin: 0;
+    color: transparent;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #000;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+#banner {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 2s;
+}
+#countdown {
+    text-align: center;
+    font-size: 2em;
+    color: #9000FF;
+}
+#info {
+    margin: 20px;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.roxo {
+    font-weight: bold;
+    color: #9000FF;
+    font-size: larger;
+    margin-left: 3px
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+a:hover {
+    color: #9000FF;
+}
+
+#lupe {
+    color: #9000FF;
+}
+
+#lupe:hover {
+    color: #3700ff;
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 500px;
+        height: 100vh;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container {
+        justify-content: center;
+    }
+
+    .radial {
+        display: flex;
+    }
+
+    #r1 {
+        display: none;
+    }
+
+    #r2 {
+        top: 400px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #footer {
+        margin-top: 100px;
+        position: static;
+    }
+
+    #countdown {
+        text-align: center;
+        font-size: 1.5em;
+        color: #9000FF;
+    }
+}
