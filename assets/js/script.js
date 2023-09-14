@@ -26,7 +26,3 @@
       document.getElementById("countdown").innerHTML = "😝 EVENTO EM ANDAMENTO 😝";
       }
    }, 1000);
-
-   document.querySelector('.roxo').addEventListener('click', function() {
-    window.open('https://www.instagram.com/luizeduos/');
-   })
