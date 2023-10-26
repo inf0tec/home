@@ -17,111 +17,109 @@ var countdownfunction = setInterval(function () {
 }, 1000);
 
 const slides = document.querySelectorAll('.card');
-const slideTransf = document.querySelector('#slide');
+const slideTransf = document.querySelector('#slide')
 const prevBtn = document.querySelector('#prevButton');
 const nextBtn = document.querySelector('#nextButton');
 const pauseBtn = document.querySelector('#pauseButton');
 
 let isPaused = false;
 let intervalId;
-let intervalId2;
 let currentIndex = 0;
 
-
-function slideAnimation1366() {
+function slideAnimation() {
     currentIndex++;
     if (currentIndex >= slides.length) {
-      currentIndex = 0;
+        currentIndex = 0;
     }
     slides.forEach((slide, index) => {
-      if (index === currentIndex) {
-        slide.id = 'c2';
-        switch (currentIndex) {
-          case 1:
-            slideTransf.style.transform = 'translateX(21.5vw)';
-            break;
-          case 2:
-            slideTransf.style.transform = 'translateX(-16vw)';
-            break;
-          case 3:
-            slideTransf.style.transform = 'translateX(-56,5vw)';
-            break;
-          default:
-            slideTransf.style.transform = 'translateX(65vw)';
-            break;
+        if (index === currentIndex) {
+            slide.id = 'c2';
+            switch (currentIndex) {
+              case 1:
+                slideTransf.style.transform = 'translateX(21%)';
+                break;
+              case 2:
+                slideTransf.style.transform = 'translateX(-22,5%)';
+                break;
+              case 3:
+                slideTransf.style.transform = 'translateX(-66%)';
+                break;
+              default:
+                slideTransf.style.transform = 'translateX(64.5%)';
+                break;
+            }
+        } else {
+            slide.id = 'c1';
+            slide.style.transform = '';
         }
-      } else {
-        slide.id = 'c1';
-        slide.style.transform = '';
-      }
     });
 }
 
-function slideAnimation1920() {
-    currentIndex++;
-    if (currentIndex >= slides.length) {
-      currentIndex = 0;
+
+
+
+function prevSlide() {
+    currentIndex--;
+    if (currentIndex  > 5 ) {
+        currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = 4
     }
     slides.forEach((slide, index) => {
-      if (index === currentIndex) {
-        slide.id = 'c2';
-        switch (currentIndex) {
-          case 1:
-            slideTransf.style.transform = 'translateX(15.5vw)';
-            break;
-          case 2:
-            slideTransf.style.transform = 'translateX(-15vw)';
-            break;
-          case 3:
-            slideTransf.style.transform = 'translateX(-45.5vw)';
-            break;
-          default:
-            slideTransf.style.transform = 'translateX(46vw)';
-            break;
+        if (index === currentIndex) {
+            slide.id = 'c2';
+            switch (currentIndex) {
+              case 1:
+                slideTransf.style.transform = 'translateX(21%)';
+                break;
+              case 2:
+                slideTransf.style.transform = 'translateX(-22,5%)';
+                break;
+              case 3:
+                slideTransf.style.transform = 'translateX(-66%)';
+                break;
+              default:
+                slideTransf.style.transform = 'translateX(64.5%)';
+                break;
+            }
+            console.log(currentIndex)
+        } else {
+            slide.id = 'c1';
+            slide.style.transform = '';
         }
-      } else {
-        slide.id = 'c1';
-        slide.style.transform = '';
-      }
-    });
+    })
 }
 
-let mediaQueries = {
-  "(max-width: 1366px)": function(e) {
-    if (e.matches) {
-      // Chame a função slideAnimation1366 aqui
-      slideAnimation1366();
-      console.log("Media query (max-width: 1366px) corresponde!");
-    } else {
-      console.log("Media query (max-width: 1366px) não corresponde!");
-    }
-  },
-  "(max-width: 1920px)": function(e) {
-    if (e.matches) {
-      // Chame a função slideAnimation1920 aqui
-      slideAnimation1920();
-      console.log("Media query (max-width: 1920px) corresponde!");
-    } else {
-      console.log("Media query (max-width: 1920px) não corresponde!");
-    }
-  }
-};
-
-// Adicione listeners para cada media query
-for (let query in mediaQueries) {
-  let mediaQuery = window.matchMedia(query);
-  mediaQuery.addListener(mediaQueries[query]);
-
-  // Verifique a correspondência inicial
-  if (mediaQuery.matches) {
-    mediaQueriesquery;
-    console.log(`Media query ${query} corresponde!`);
-  } else {
-    console.log(`Media query ${query} não corresponde!`);
-  }
+function nextSlide() {
+    slideAnimation()
 }
-intervalId = setInterval(slideAnimation1366, 5000);
-intervalId2 = setInterval(slideAnimation1920, 5000);
+
+function pauseSlide() {
+    const pauseButton = document.getElementById('pauseButton');
+
+    if (!isPaused) {
+        clearInterval(intervalId);
+        isPaused = true;
+        pauseButton.classList.remove('fa-pause'); 
+        pauseButton.classList.add('fa-play');
+    } else {
+        intervalId = setInterval(slideAnimation, 5000);
+        isPaused = false;
+        pauseButton.classList.remove('fa-play');
+        pauseButton.classList.add('fa-pause');
+    }
+}
+
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+const pauseButton = document.getElementById('pauseButton');
+
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+pauseButton.addEventListener('click', pauseSlide);
+
+intervalId = setInterval(slideAnimation, 5000);
+
 
 function ari() {
     window.location.href = "https://arineto1.github.io/fetec"
@@ -136,7 +134,7 @@ function robo () {
 }
 
 function scratch() {
-    window.location.href = "../scratch.html";
+    window.location.href = "scratch.html";
 }
 
 function spotify() {

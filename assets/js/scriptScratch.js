@@ -12,7 +12,7 @@ var countdownfunction = setInterval(function () {
 
     if (distance < 0) {
         clearInterval(countdownfunction);
-        document.getElementById("countdown").innerHTML = "😝 Procure um monitor para conhecer de perto 😝";
+        document.getElementById("timestamp").innerHTML = "😝 Procure um monitor para conhecer de perto 😝";
     }
 }, 1000);
 
@@ -36,31 +36,31 @@ function slideAnimation() {
             slide.id = 'c2';
             switch (currentIndex) {
                 case 1:
-                    slideTransf.style.transform = 'translateX(81.5vw)';
+                    slideTransf.style.transform = 'translateX(108%)';
                     break;
                 case 2:
-                    slideTransf.style.transform = 'translateX(49vw)';
+                    slideTransf.style.transform = 'translateX(65%)';
                     break;
                 case 3:
-                    slideTransf.style.transform = 'translateX(16.5vw)';
+                    slideTransf.style.transform = 'translateX(22%)';
                     break;
                 case 4:
-                    slideTransf.style.transform = 'translateX(-16vw)';
+                    slideTransf.style.transform = 'translateX(-21%)';
                     break;
                 case 5:
-                    slideTransf.style.transform = 'translateX(-48.5vw)';
+                    slideTransf.style.transform = 'translateX(-64%)';
                     break;
                 case 6:
-                    slideTransf.style.transform = 'translateX(-81vw)';
+                    slideTransf.style.transform = 'translateX(-107%)';
                     break;
                 case 7:
-                    slideTransf.style.transform = 'translateX(-113.5vw)';
+                    slideTransf.style.transform = 'translateX(-150%)';
                     break;
                 case 8:
-                    slideTransf.style.transform = 'translateX(-146vw)';
+                    slideTransf.style.transform = 'translateX(-193%)';
                     break;
                 default:
-                    slideTransf.style.transform = 'translateX(114vw)';
+                    slideTransf.style.transform = 'translateX(151%)';
                     break;
             }
         } else {
@@ -85,31 +85,31 @@ function prevSlide() {
             slide.id = 'c2';
             switch (currentIndex) {
                 case 1:
-                    slideTransf.style.transform = 'translateX(81.5vw)';
+                    slideTransf.style.transform = 'translateX(108%)';
                     break;
                 case 2:
-                    slideTransf.style.transform = 'translateX(49vw)';
+                    slideTransf.style.transform = 'translateX(65%)';
                     break;
                 case 3:
-                    slideTransf.style.transform = 'translateX(16.5vw)';
+                    slideTransf.style.transform = 'translateX(22%)';
                     break;
                 case 4:
-                    slideTransf.style.transform = 'translateX(-16vw)';
+                    slideTransf.style.transform = 'translateX(-21%)';
                     break;
                 case 5:
-                    slideTransf.style.transform = 'translateX(-48.5vw)';
+                    slideTransf.style.transform = 'translateX(-64%)';
                     break;
                 case 6:
-                    slideTransf.style.transform = 'translateX(-81vw)';
+                    slideTransf.style.transform = 'translateX(-107%)';
                     break;
                 case 7:
-                    slideTransf.style.transform = 'translateX(-113.5vw)';
+                    slideTransf.style.transform = 'translateX(-150%)';
                     break;
                 case 8:
-                    slideTransf.style.transform = 'translateX(-146vw)';
+                    slideTransf.style.transform = 'translateX(-193%)';
                     break;
                 default:
-                    slideTransf.style.transform = 'translateX(114vw)';
+                    slideTransf.style.transform = 'translateX(151%)';
                     break;
             }
             console.log(currentIndex)

@@ -18,11 +18,12 @@ body {
     color: #fff;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
     flex-direction: column;
 }
 
 .none {
-    display: none;
+    display: none !important;
 }
 
 #font {
@@ -553,12 +554,11 @@ footer span {
         align-items: center;
         flex-wrap: nowrap;
         gap: 150px;
-        position: relative;
-        transform: translateX(65vw);
+        transform: translateX(64.5%);
         transition: transform 2.2s linear;
     }
     
-    .card {
+    #c2 {
         width: 474px;
         height: 565px;
         flex-shrink: 0;
