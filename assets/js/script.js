@@ -12,7 +12,7 @@ var countdownfunction = setInterval(function () {
 
     if (distance < 0) {
         clearInterval(countdownfunction);
-        document.getElementById("countdown").innerHTML = "😝 EVENTO EM ANDAMENTO 😝";
+        document.getElementById("timestamp").innerHTML = "😝 EVENTO EM ANDAMENTO 😝";
     }
 }, 1000);
 
