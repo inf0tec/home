@@ -12,7 +12,7 @@ var countdownfunction = setInterval(function () {
 
     if (distance < 0) {
         clearInterval(countdownfunction);
-        document.getElementById("timestamp").innerHTML = "😝 Procure um monitor para conhecer de perto 😝";
+        document.getElementById("countdown").innerHTML = "😝 Procure um monitor para conhecer de perto 😝";
     }
 }, 1000);
 
@@ -35,33 +35,18 @@ function slideAnimation() {
         if (index === currentIndex) {
             slide.id = 'c2';
             switch (currentIndex) {
-                case 1:
-                    slideTransf.style.transform = 'translateX(108%)';
-                    break;
-                case 2:
-                    slideTransf.style.transform = 'translateX(65%)';
-                    break;
-                case 3:
-                    slideTransf.style.transform = 'translateX(22%)';
-                    break;
-                case 4:
-                    slideTransf.style.transform = 'translateX(-21%)';
-                    break;
-                case 5:
-                    slideTransf.style.transform = 'translateX(-64%)';
-                    break;
-                case 6:
-                    slideTransf.style.transform = 'translateX(-107%)';
-                    break;
-                case 7:
-                    slideTransf.style.transform = 'translateX(-150%)';
-                    break;
-                case 8:
-                    slideTransf.style.transform = 'translateX(-193%)';
-                    break;
-                default:
-                    slideTransf.style.transform = 'translateX(151%)';
-                    break;
+              case 1:
+                slideTransf.style.transform = 'translateX(21%)';
+                break;
+              case 2:
+                slideTransf.style.transform = 'translateX(-22,5%)';
+                break;
+              case 3:
+                slideTransf.style.transform = 'translateX(-66%)';
+                break;
+              default:
+                slideTransf.style.transform = 'translateX(64.5%)';
+                break;
             }
         } else {
             slide.id = 'c1';
@@ -75,42 +60,27 @@ function slideAnimation() {
 
 function prevSlide() {
     currentIndex--;
-    if (currentIndex  > 9 ) {
+    if (currentIndex  > 5 ) {
         currentIndex = 0;
     } else if (currentIndex < 0) {
-        currentIndex = 8
+        currentIndex = 4
     }
     slides.forEach((slide, index) => {
         if (index === currentIndex) {
             slide.id = 'c2';
             switch (currentIndex) {
-                case 1:
-                    slideTransf.style.transform = 'translateX(108%)';
-                    break;
-                case 2:
-                    slideTransf.style.transform = 'translateX(65%)';
-                    break;
-                case 3:
-                    slideTransf.style.transform = 'translateX(22%)';
-                    break;
-                case 4:
-                    slideTransf.style.transform = 'translateX(-21%)';
-                    break;
-                case 5:
-                    slideTransf.style.transform = 'translateX(-64%)';
-                    break;
-                case 6:
-                    slideTransf.style.transform = 'translateX(-107%)';
-                    break;
-                case 7:
-                    slideTransf.style.transform = 'translateX(-150%)';
-                    break;
-                case 8:
-                    slideTransf.style.transform = 'translateX(-193%)';
-                    break;
-                default:
-                    slideTransf.style.transform = 'translateX(151%)';
-                    break;
+              case 1:
+                slideTransf.style.transform = 'translateX(21%)';
+                break;
+              case 2:
+                slideTransf.style.transform = 'translateX(-22,5%)';
+                break;
+              case 3:
+                slideTransf.style.transform = 'translateX(-66%)';
+                break;
+              default:
+                slideTransf.style.transform = 'translateX(64.5%)';
+                break;
             }
             console.log(currentIndex)
         } else {
@@ -130,7 +100,7 @@ function pauseSlide() {
     if (!isPaused) {
         clearInterval(intervalId);
         isPaused = true;
-        pauseButton.classList.remove('fa-pause');
+        pauseButton.classList.remove('fa-pause'); 
         pauseButton.classList.add('fa-play');
     } else {
         intervalId = setInterval(slideAnimation, 5000);
