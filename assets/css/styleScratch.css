@@ -219,7 +219,7 @@ main img {
 
 h2 {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 70px;
+    font-size: 80px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -290,7 +290,7 @@ h3#timestamp {
     flex-wrap: nowrap;
     gap: 150px;
     position: relative;
-    transform: translateX(151%);
+    transform: translateX(114vw);
     transition: transform 2.2s linear;
 }
 

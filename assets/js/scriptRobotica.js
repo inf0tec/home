@@ -12,7 +12,7 @@ var countdownfunction = setInterval(function () {
 
     if (distance < 0) {
         clearInterval(countdownfunction);
-        document.getElementById("timestamp").innerHTML = "😝 Procure um monitor para conhecer de perto 😝";
+        document.getElementById("countdown").innerHTML = "😝 Procure um monitor para conhecer de perto 😝";
     }
 }, 1000);
 
