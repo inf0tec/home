@@ -267,7 +267,7 @@ h3#timestamp {
         flex-wrap: nowrap;
         gap: 150px;
         position: relative;
-        transform: translateX(65vw);
+        transform: translateX(57vw);
         transition: transform 2.2s linear;
 }
 
