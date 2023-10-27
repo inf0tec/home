@@ -256,6 +256,21 @@ h3#timestamp {
     min-height: 100vh;
 }
 
+#slide {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        width: 100vw;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 150px;
+        position: relative;
+        transform: translateX(65vw);
+        transition: transform 2.2s linear;
+}
+
 .card {
     width: 574px;
     height: 665px;
@@ -540,134 +555,6 @@ footer span {
 
 .cor {
     color: #9000ff;
-}
-
-@media (max-width: 1366px) {
-    #slide {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        display: flex;
-        width: 100vw;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: 150px;
-        position: relative;
-        transform: translateX(65vw);
-        transition: transform 2.2s linear;
-    }
-    
-    .card {
-        width: 474px;
-        height: 565px;
-        flex-shrink: 0;
-        border-radius: 15px;
-        background: #FFF;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: all .8;
-        cursor: pointer;
-    }
-
-    #c2 > .textCard > .categoria {
-        color: #9000ff;
-        font-family: 'Inter', sans-serif;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-    
-    #c2 > .textCard > p {
-        color: rgba(0, 0, 0, 0.80);
-        font-family: 'Inter', sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        width: 411px;
-        text-align: left;
-    }
-    
-    #c2 > .textCard > h3 {
-        width: 421px;
-        height: auto;
-        color: #000;
-        font-family: 'Inter', sans-serif;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-align: left;
-        margin: 9px 0px 9px 0px;
-    }
-    
-    #c1 {
-        width: 440px;
-        height: 508px;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        transition: all 2s ease;
-    }
-    
-    #c1 > .textCard > .categoria { 
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-align: left;
-        margin-bottom: 5px;
-        width: 390px;
-        height: 18px;
-        flex-shrink: 0;
-        color: #9000ff;
-    }
-    
-    #c1 > .textCard > h3 {
-        color: #000;
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        width: 280px;
-        height: auto;
-        text-align: left;
-        margin-bottom: auto;
-    }
-    
-    #c1 > .textCard > p {
-        width: 390px;
-        height: 97px;
-        flex-shrink: 0;
-        color: rgba(0, 0, 0, 0.80);
-        font-family: 'Inter', sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-align: left;
-    
-    }
-    
-    #c1 > .img {
-        width: 390px;
-        height: 230px;
-        margin-bottom: 40px;
-    }
-    
-    .img {
-        width: 410px;
-        height: auto;
-        flex-shrink: 0;
-        border-radius: 5px;
-        margin-bottom: 46px;
-    }
 }
 
 @media (max-width: 600px) {
