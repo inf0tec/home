@@ -275,7 +275,7 @@ h3#timestamp {
     padding-top: 50px;
     padding-bottom: 50px;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: scroll;
     min-height: 100vh;
 }
 
